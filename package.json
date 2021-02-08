@@ -1,0 +1,41 @@
+{
+  "name": "twotone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "start": "cross-env nodemon server/server.js",
+    "dev": "cross-env NODE_ENV=development concurrently \" webpack-dev-server\" \"nodemon server/server.js\"",
+    "build": "cross-env NODE_ENV=production webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "enzyme": "^3.11.0",
+    "express": "^4.17.1",
+    "jest": "^26.6.3",
+    "pg": "^8.5.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "concurrently": "^4.1.0",
+    "cross-env": "^5.2.1",
+    "css-loader": "^5.0.1",
+    "nodemon": "^1.18.9",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "supertest": "^6.0.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
