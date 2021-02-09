@@ -3,7 +3,7 @@ import React, { Component, useState, useEffect } from 'react';
 const App = () => {
   return (
     <div>
-      Two Tone
+      Two Tone test
     </div>
   )
 };
