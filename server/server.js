@@ -32,11 +32,8 @@ app.get('/getRecording', (req, res) => {
       
 app.post('/postRecording', (req, res) => {
   const { user_attribution, location, blob } = req.body
-  console.log(user_attribution, location, blob)
-  const postRecording = 'INSERT INTO submissions2 (user_attribution, location, blob) VALUES ($1, $2, $3);';
-
-  // db.query(postRecording, [user_attribution, location, blob], (err, data) => {
-    db.query(postRecording, ['test','test','test'], (err, data) => {
+  const postRecording = 'INSERT INTO submissions2 (user_attribution, location, blob, time_stamp) VALUES ($1, $2, $3, Now());';
+    db.query(postRecording, [user_attribution, location, blob], (err, data) => {
     if (err){
       return `ERROR: ${err}`;
     }
