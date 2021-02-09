@@ -1,17 +1,20 @@
 import React, { Component, useState, useEffect } from 'react';
+import { Switch, Route } from 'react-router-dom';
+
+// local state here to track whether the user has logged in correctly
 
 const App = () => {
+
   return (
     <div>
-      Two Tone
-      <div>
-      <audio
-        controls
-        src="/media/cc0-audio/t-rex-roar.mp3">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio>
-      </div>
+      <Switch>
+        <Route exact path='/login'>
+          <Landing />
+        </Route>
+        <Route exact path='/visualizer'>
+          <Visualizer />
+        </Route>
+      </Switch>
     </div>
   )
 };
