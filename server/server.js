@@ -1,7 +1,8 @@
+require('dotenv').config()
 const express = require('express');
 const app = express();
 const path = require('path');
-
+const db = require('./pool.js');
 //routers
 
 
@@ -10,7 +11,37 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 // route handlers
+app.get('/getRecording', (req, res) => {
+  const allRecordings = 'SELECT * FROM submissions2;';
+  db.query(allRecordings, (err, data) => {
+    if (err){
+      return `ERROR: ${err}`;
+    }
+    else{
+      console.log(data.rows)
+      res.locals.data = data.rows;
+      return res.send(res.locals.data);
+    }
+  })
+})
 
+// INSERT INTO submissions2 ( user_attribution, time_stamp, location, blob) 
+// VALUES (
+//   'giaoandevan', Now(), 'SJandSD', 'blob'
+//   );
+      
+app.post('/postRecording', (req, res) => {
+  const { user_attribution, location, blob } = req.body
+  const postRecording = 'INSERT INTO submissions2 (user_attribution, location, blob, time_stamp) VALUES ($1, $2, $3, Now());';
+    db.query(postRecording, [user_attribution, location, blob], (err, data) => {
+    if (err){
+      return `ERROR: ${err}`;
+    }
+    else {
+      return res.send("success");
+    }
+  })
+})
 
 // statically serve everything in the build folder on the route '/build'
 app.use('/build', express.static(path.join(__dirname, '../build')));
