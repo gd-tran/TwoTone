@@ -7,7 +7,6 @@ import store from './redux/store';
 
 
 
-
 render(
   <Provider store={store}>
     <BrowserRouter>
