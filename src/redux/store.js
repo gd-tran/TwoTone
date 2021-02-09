@@ -1,5 +1,5 @@
-import { createStore } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
+
+import { createStore } from 'redux'
 import reducers from './reducers/index';
 
 
@@ -7,7 +7,7 @@ import reducers from './reducers/index';
 // Create initial store with this function 
 const store = createStore(
   reducers,
-  composeWithDevTools()
+  
 );
 
 export default store;
