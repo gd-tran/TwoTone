@@ -1,117 +1,199 @@
-import React from 'react';
+import React from "react";
 
 const ACircle = () => {
-  
-}
+  let AStyle = {
+    padding: 10,
+    margin: 20,
+    display: "inline-block",
+    backgroundColor: "#393E41",
+    borderRadius: "50%",
+    width: 100,
+    height: 100,
+  };
 
-var Circle = React.createClass({
-
-    render:function(){
-
-      var circleStyle = {
-        padding:10,
-        margin:20,
-        display:"inline-block",
-        backgroundColor: "#393E41", 
-        borderRadius: "50%",
-        width:100,
-        height:100,
-      };
-
-      return (
-        <div style={circleStyle}>
-        </div>
-      );
-    }
-  });
-
-
-  var colors = ["#393E41", "#E94F37", "#1C89BF", "#A1D363",
-                   "#85FFC7", "#297373", "#FF8552", "#A40E4C"];
-  
-  var renderData = [];
-  
-  for (var i = 0; i < colors.length; i++) {
-    var color = colors[i];
-    renderData.push(<Circle key={i + color} bgColor={color}/>);
-  }
-
-
-  var destination = document.querySelector("#container");
-  
-//   ReactDOM.render(
-//     <div>
-//       {renderData}
-//     </div>,
-//     destination
-//   );
-
-
+  return <div id="ACircle" style={AStyle}></div>;
+};
 
 const WCircle = () => {
-    return (
-        <div>W</div>
-    )
-}
+  let WStyle = {
+    padding: 10,
+    margin: 20,
+    display: "inline-block",
+    backgroundColor: "#DC143C",
+    borderRadius: "50%",
+    width: 100,
+    height: 100,
+  };
+
+  return <div id="WCircle" style={WStyle}></div>;
+};
 
 const SCircle = () => {
-    return (
-        <div>S</div>
-    )
-}
+  let SStyle = {
+    padding: 10,
+    margin: 20,
+    display: "inline-block",
+    backgroundColor: "#FF7F00",
+    borderRadius: "50%",
+    width: 100,
+    height: 100,
+  };
+
+  return <div id="SCircle" style={SStyle}></div>;
+};
 
 const ECircle = () => {
-  return (
-      <div>E</div>
-  )
-}
+  let EStyle = {
+    padding: 10,
+    margin: 20,
+    display: "inline-block",
+    backgroundColor: "#FFFF00",
+    borderRadius: "50%",
+    width: 100,
+    height: 100,
+  };
+
+  return <div id="ECircle" style={EStyle}></div>;
+};
 
 const DCircle = () => {
-    return (
-        <div>D</div>
-    )
-}
+  let DStyle = {
+    padding: 10,
+    margin: 20,
+    display: "inline-block",
+    backgroundColor: "#00FF00",
+    borderRadius: "50%",
+    width: 100,
+    height: 100,
+  };
+
+  return <div id="DCircle" style={DStyle}></div>;
+};
 
 const FCircle = () => {
-    return (
-        <div>F</div>
-    )
-}
+  let FStyle = {
+    padding: 10,
+    margin: 20,
+    display: "inline-block",
+    backgroundColor: "#0000FF",
+    borderRadius: "50%",
+    width: 100,
+    height: 100,
+  };
 
-  const TCircle = () => {
-      return (
-          <div>T</div>
-      )
-  }
-  
-  const GCircle = () => {
-      return (
-          <div>G</div>
-      )
-  }
+  return <div id="FCircle" style={FStyle}></div>;
+};
 
-  const YCircle = () => {
-    return (
-        <div>Y</div>
-    )
-}
+const TCircle = () => {
+  let TStyle = {
+    padding: 10,
+    margin: 20,
+    display: "inline-block",
+    backgroundColor: "#2E2B5F",
+    borderRadius: "50%",
+    width: 100,
+    height: 100,
+  };
+
+  return <div id="TCircle" style={TStyle}></div>;
+};
+
+const GCircle = () => {
+  let GStyle = {
+    padding: 10,
+    margin: 20,
+    display: "inline-block",
+    backgroundColor: "#FF5733",
+    borderRadius: "50%",
+    width: 100,
+    height: 100,
+  };
+
+  return <div id="GCircle" style={GStyle}></div>;
+};
+
+const YCircle = () => {
+  let YStyle = {
+    padding: 10,
+    margin: 20,
+    display: "inline-block",
+    backgroundColor: "#3386FF",
+    borderRadius: "50%",
+    width: 100,
+    height: 100,
+  };
+
+  return <div id="YCircle" style={YStyle}></div>;
+};
+
+const HCircle = () => {
+  let HStyle = {
+    padding: 10,
+    margin: 20,
+    display: "inline-block",
+    backgroundColor: "#E033FF",
+    borderRadius: "50%",
+    width: 100,
+    height: 100,
+  };
+
+  return <div id="HCircle" style={HStyle}></div>;
+};
 
 const UCircle = () => {
-    return (
-        <div>U</div>
-    )
-}
+  let UStyle = {
+    padding: 10,
+    margin: 20,
+    display: "inline-block",
+    backgroundColor: "#8B00FF",
+    borderRadius: "50%",
+    width: 100,
+    height: 100,
+  };
+
+  return <div id="UCircle" style={UStyle}></div>;
+};
 
 const JCircle = () => {
-    return (
-        <div>J</div>
-    )
-}
+  let JStyle = {
+    padding: 10,
+    margin: 20,
+    display: "inline-block",
+    backgroundColor: "#393E41",
+    borderRadius: "50%",
+    width: 100,
+    height: 100,
+  };
+
+  return <div id="JCircle" style={JStyle}></div>;
+};
 
 const KCircle = () => {
-    return (
-        <div>K</div>
-    )
-}
+  let KStyle = {
+    padding: 10,
+    margin: 20,
+    display: "inline-block",
+    backgroundColor: "#DC143C",
+    borderRadius: "50%",
+    width: 100,
+    height: 100,
+  };
 
-export default { ACircle }
+  return <div id="KCircle" style={KStyle}></div>;
+};
+
+export {
+  ACircle,
+  WCircle,
+  SCircle,
+  ECircle,
+  DCircle,
+  FCircle,
+  TCircle,
+  GCircle,
+  YCircle,
+  HCircle,
+  UCircle,
+  JCircle,
+  KCircle,
+};
