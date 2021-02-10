@@ -1,17 +1,22 @@
 import React from "react";
 
 const ACircle = () => {
-  let AStyle = {
-    padding: 10,
-    margin: 20,
-    display: "inline-block",
-    backgroundColor: "#393E41",
-    borderRadius: "50%",
-    width: 100,
-    height: 100,
-  };
+  // let AStyle = {
+  //   padding: 10,
+  //   margin: 20,
+  //   display: "inline-block",
+  //   backgroundColor: "#393E41",
+  //   borderRadius: "50%",
+  //   width: 100,
+  //   height: 100,
+  // };
 
-  return <div id="ACircle" style={AStyle}></div>;
+  return (
+    <div>
+      {/* <div id="ACircle" style={AStyle}></div> */}
+      <audio autoPlay src="A3.mp3"></audio>
+    </div>
+  )
 };
 
 const WCircle = () => {
