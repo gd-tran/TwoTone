@@ -2,6 +2,8 @@
   position: absolute;
   left: 530px;
   top: 260px;
+  opacity: 1;
+  transition: opacity 0.3 ease-in-out;
 }
 
 #WCircle {
@@ -91,3 +93,16 @@
 /* position: fixed;
 top: 50%;
 left: 50%; */
+
+
+/* #myLogo {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3 ease-in-out;
+}
+#myLogo.fade {
+  opacity:0;
+} */
