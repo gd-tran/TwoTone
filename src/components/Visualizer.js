@@ -9,82 +9,81 @@ import ACircle from './shapes/circles';
 
 function Visualizer() {
 
-    const [shapes, setShapes] = useState(['']);
-    
-    const handleKeyDown = (event) => {
-//updates state usin
-        if (event.code === 'KeyA') {
-            setShapes(['a'])
-        }
-    
-        if (event.code === 'KeyW') {
-            setShapes(['w'])
-        }
+  const [shapes, setShapes] = useState(['']);
+  
+  const handleKeyDown = (event) => {
+    //updates state using
+    if (event.code === 'KeyA') {
+      setShapes(['a'])
+    }
 
-        if (event.code === 'KeyS') {
-            setShapes(['s'])
-        }
+    if (event.code === 'KeyW') {
+      setShapes(['w'])
+    }
 
-        if (event.code === 'KeyE') {
-            setShapes(['e'])
-        }
+    if (event.code === 'KeyS') {
+      setShapes(['s'])
+    }
 
-        if (event.code === 'KeyD') {
-            setShapes(['d'])
-        }
+    if (event.code === 'KeyE') {
+      setShapes(['e'])
+    }
 
-        if (event.code === 'KeyF') {
-            setShapes(['f'])
-        }
+    if (event.code === 'KeyD') {
+      setShapes(['d'])
+    }
 
-        if (event.code === 'KeyT') {
-            setShapes(['t'])
-        }
+    if (event.code === 'KeyF') {
+      setShapes(['f'])
+    }
 
-        if (event.code === 'KeyG') {
-            setShapes(['g'])
-        }
+    if (event.code === 'KeyT') {
+      setShapes(['t'])
+    }
 
-        if (event.code === 'KeyY') {
-            setShapes(['y'])
-        }
+    if (event.code === 'KeyG') {
+      setShapes(['g'])
+    }
 
-        if (event.code === 'KeyU') {
-            setShapes(['u'])
-        }
+    if (event.code === 'KeyY') {
+      setShapes(['y'])
+    }
 
-        if (event.code === 'KeyJ') {
-            setShapes(['j'])
-        }
+    if (event.code === 'KeyU') {
+      setShapes(['u'])
+    }
 
-        if (event.code === 'KeyK') {
-            setShapes(['k'])
-        }
-    
+    if (event.code === 'KeyJ') {
+      setShapes(['j'])
+    }
+
+    if (event.code === 'KeyK') {
+      setShapes(['k'])
+    }
+  
+  };
+  
+  useEffect(() => {
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    // cleanup this component
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
     };
-    
-    useEffect(() => {
 
-        window.addEventListener('keydown', handleKeyDown);
-    
-        // cleanup this component
-        return () => {
-        window.removeEventListener('keydown', handleKeyDown);
-        };
-
-    }, []);
-    
-    return (
-        <div className='container'>
-        <h1>Welcome to the Keydown Listening Component</h1>
+  }, []);
+  
+  return (
+    <div className='container'>
+    <h1>Welcome to the Keydown Listening Component</h1>
+    {
         {
-            {
-                'a': <ACircle/>,
-            }[shapes]
-        }
-        </div>
-    );
-
+            'a': <ACircle/>,
+        }[shapes]
+    }
+    </div>
+  );
 }
 
 export default connect(
