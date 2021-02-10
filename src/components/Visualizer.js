@@ -26,6 +26,7 @@ function Visualizer() {
   const [CNote, setCNote] = useState(false);
   const [DsharpNote, setDsharpNote] = useState(false);
   const [DNote, setDNote] = useState(false);
+  const [ENote, setENote] = useState(false);
 
   const handleKeyDown = (event) => {
     //updates state usin
@@ -42,7 +43,7 @@ function Visualizer() {
     }
 
     if (event.code === "KeyE") {
-      setShapes(["e"]);
+      setENote(true);
     }
 
     if (event.code === "KeyD") {
@@ -94,6 +95,9 @@ function Visualizer() {
     if (event.code === "KeyS") {
       setDNote(false);
     }
+    if (event.code === "KeyE") {
+      setENote(false);
+    }
   }
 
   useEffect(() => {
@@ -122,6 +126,11 @@ function Visualizer() {
         {{
           true: <SCircle />
         }[DNote]}
+      </div>
+      <div>
+        {{
+          true: <ECircle />
+        }[ENote]}
       </div>
 
       {/* <div id="circleContainer">

@@ -11,7 +11,8 @@ const ACircle = () => {
     height: 100,
   };
 
-  return <div id="ACircle" style={AStyle}></div>;
+  return (
+  <div id="ACircle" style={AStyle}></div>);
 };
 
 const WCircle = () => {

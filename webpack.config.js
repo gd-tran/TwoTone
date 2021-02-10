@@ -40,6 +40,14 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.mp3$/,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
   mode: process.env.NODE_ENV,
