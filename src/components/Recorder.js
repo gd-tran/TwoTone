@@ -14,7 +14,6 @@ const Recorder = () => {
   osc1.connect(dest);
   osc2.connect(dest);
 
-  // const ASound = new Audio("./sounds/Piano_Roll_A3#.mp3");
 
   // ASound.play();
   const audioElement = document.getElementById("pianoA")  
@@ -77,11 +76,11 @@ const Recorder = () => {
     <div>
       <h1>Recorder Element</h1>
       <p>Encoding a pure sine wave to an Opus file </p>
-      <button onClick={record}>Sound 1</button>
+      {/* <button onClick={record}>Sound 1</button>
       <button onClick={record2}>Sound 2</button>
       <button onClick={stopRecording}>STOP RECORDING</button>
-      <audio id="test" controls></audio>
-      <audio autoPlay src="./src/components/A3Sharp.mp3"></audio>
+      <audio id="test" controls></audio> */}
+      <audio controls src="./src/assets/A3Sharp.mp3"></audio>
     </div>
   );
 };
