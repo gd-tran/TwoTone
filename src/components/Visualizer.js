@@ -37,15 +37,11 @@ function Visualizer() {
   const [BNote, setBNote] = useState(false); // j
   const [highCNote, setHighCNote] = useState(false); // k
 
-  
 
   const handleKeyDown = (event) => {
     //updates state usin
     if (event.code === "KeyA") {
       setCNote(true);
-      let audio = new Audio();
-      audio.src = require('../assets/A3.mp3')
-      audio.play();
     }
 
     if (event.code === "KeyW") {
@@ -164,7 +160,6 @@ function Visualizer() {
   return (
     <div id="container">
       <div id="circleContainer">
-        <ACircle />
         <div>
           {{
             true: <ACircle />
