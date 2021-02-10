@@ -200,6 +200,7 @@ function Visualizer() {
   
   return (
     <div id="container">
+
       <audio id="C3" src="./src/assets/C3.mp3"></audio>
       <audio id="C3Sharp" src="./src/assets/C3Sharp.mp3"></audio>
       <audio id="D3" src="./src/assets/D3.mp3"></audio>
@@ -213,6 +214,7 @@ function Visualizer() {
       <audio id="A3Sharp" src="./src/assets/A3Sharp.mp3"></audio>
       <audio id="B3" src="./src/assets/B3.mp3"></audio>
       <audio id="C4" src="./src/assets/C4.mp3"></audio>
+      
       <div id="circleContainer">
         <ACircle />
         
