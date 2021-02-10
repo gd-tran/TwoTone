@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "css": "^3.0.0",
     "dotenv": "^8.2.0",
     "enzyme": "^3.11.0",
     "express": "^4.17.1",
@@ -33,6 +34,7 @@
     "concurrently": "^4.1.0",
     "cross-env": "^5.2.1",
     "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
     "nodemon": "^1.18.9",
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
