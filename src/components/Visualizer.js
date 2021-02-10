@@ -23,18 +23,33 @@ import "../styles.css";
 // updates state usinh setShapes; pass the new value of state in an array
 
 function Visualizer() {
-  const [CNote, setCNote] = useState(false);
-  const [DsharpNote, setDsharpNote] = useState(false);
-  const [DNote, setDNote] = useState(false);
+  const [CNote, setCNote] = useState(false); // a
+  const [CsharpNote, setCsharpNote] = useState(false); // w
+  const [DNote, setDNote] = useState(false); // s
+  const [DsharpNote, setDsharpNote] = useState(false); // e
+  const [ENote, setENote] = useState(false); // d
+  const [FNote, setFNote] = useState(false); // f
+  const [FsharpNote, setFsharpNote] = useState(false); // t
+  const [GNote, setGNote] = useState(false); // g
+  const [GsharpNote, setGsharpNote] = useState(false); // y
+  const [ANote, setANote] = useState(false); // h
+  const [AsharpNote, setAsharpNote] = useState(false); // u
+  const [BNote, setBNote] = useState(false); // j
+  const [highCNote, setHighCNote] = useState(false); // k
+
+  
 
   const handleKeyDown = (event) => {
     //updates state usin
     if (event.code === "KeyA") {
       setCNote(true);
+      let audio = new Audio();
+      audio.src = require('../assets/A3.mp3')
+      audio.play();
     }
 
     if (event.code === "KeyW") {
-      setDsharpNote(true);
+      setCsharpNote(true);
     }
 
     if (event.code === "KeyS") {
@@ -42,43 +57,43 @@ function Visualizer() {
     }
 
     if (event.code === "KeyE") {
-      setShapes(["e"]);
+      setDsharpNote(true);
     }
 
     if (event.code === "KeyD") {
-      setShapes(["d"]);
+      setENote(true);
     }
 
     if (event.code === "KeyF") {
-      setShapes(["f"]);
+      setFNote(true);
     }
 
     if (event.code === "KeyT") {
-      setShapes(["t"]);
+      setFsharpNote(true);
     }
 
     if (event.code === "KeyG") {
-      setShapes(["g"]);
+      setGNote(true);
     }
 
     if (event.code === "KeyY") {
-      setShapes(["y"]);
+      setGsharpNote(true);
     }
 
     if (event.code === "KeyH") {
-      setShapes(["h"]);
+      setANote(true);
     }
 
     if (event.code === "KeyU") {
-      setShapes(["u"]);
+      setAsharpNote(true);
     }
 
     if (event.code === "KeyJ") {
-      setShapes(["j"]);
+      setBNote(true);
     }
 
     if (event.code === "KeyK") {
-      setShapes(["k"]);
+      setHighCNote(true);
     }
   };
 
@@ -88,11 +103,51 @@ function Visualizer() {
     }
 
     if (event.code === "KeyW") {
-      setDsharpNote(false);
+      setCsharpNote(false);
     }
 
     if (event.code === "KeyS") {
       setDNote(false);
+    }
+
+    if (event.code === "KeyE") {
+      setDsharpNote(false);
+    }
+
+    if (event.code === "KeyD") {
+      setENote(false);
+    }
+
+    if (event.code === "KeyF") {
+      setFNote(false);
+    }
+
+    if (event.code === "KeyT") {
+      setFsharpNote(false);
+    }
+
+    if (event.code === "KeyG") {
+      setGNote(false);
+    }
+
+    if (event.code === "KeyY") {
+      setGsharpNote(false);
+    }
+
+    if (event.code === "KeyH") {
+      setANote(false);
+    }
+
+    if (event.code === "KeyU") {
+      setAsharpNote(false);
+    }
+
+    if (event.code === "KeyJ") {
+      setBNote(false);
+    }
+
+    if (event.code === "KeyK") {
+      setHighCNote(false);
     }
   }
 
@@ -105,44 +160,77 @@ function Visualizer() {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
-
+  
   return (
     <div id="container">
-      <div>
-        {{
-          true: <ACircle />
-        }[CNote]}
+      <div id="circleContainer">
+        <ACircle />
+        <div>
+          {{
+            true: <ACircle />
+          }[CNote]}
+        </div>
+        <div>
+          {{
+            true: <WCircle />
+          }[CsharpNote]}
+        </div>
+        <div>
+          {{
+            true: <SCircle />
+          }[DNote]}
+        </div>
+        <div>
+          {{
+            true: <ECircle />
+          }[DsharpNote]}
+        </div>
+        <div>
+          {{
+            true: <DCircle />
+          }[ENote]}
+        </div>
+        <div>
+          {{
+            true: <FCircle />
+          }[FNote]}
+        </div>
+        <div>
+          {{
+            true: <TCircle />
+          }[FsharpNote]}
+        </div>
+        <div>
+          {{
+            true: <GCircle />
+          }[GNote]}
+        </div>
+        <div>
+          {{
+            true: <YCircle />
+          }[GsharpNote]}
+        </div>
+        <div>
+          {{
+            true: <HCircle />
+          }[ANote]}
+        </div>
+        <div>
+          {{
+            true: <UCircle />
+          }[AsharpNote]}
+        </div>
+        <div>
+          {{
+            true: <JCircle />
+          }[BNote]}
+        </div>
+        <div>
+          {{
+            true: <KCircle />
+          }[highCNote]}
+        </div>
       </div>
-      <div>
-        {{
-          true: <WCircle />
-        }[DsharpNote]}
-      </div>
-      <div>
-        {{
-          true: <SCircle />
-        }[DNote]}
-      </div>
-
-      {/* <div id="circleContainer">
-        {
-          {
-            a: <ACircle />,
-            w: <WCircle />,
-            s: <SCircle />,
-            e: <ECircle />,
-            d: <DCircle />,
-            f: <FCircle />,
-            t: <TCircle />,
-            g: <GCircle />,
-            y: <YCircle />,
-            h: <HCircle />,
-            u: <UCircle />,
-            j: <JCircle />,
-            k: <KCircle />,
-          }[shapes]
-        }
-      </div> */}
     </div>
   );
 }
