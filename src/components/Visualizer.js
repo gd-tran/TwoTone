@@ -50,10 +50,13 @@ function Visualizer() {
 
     if (event.code === "KeyW") {
       setCsharpNote(true);
+      document.getElementById("ASharp").play()
+      document.getElementById("ASharp").stop(1000)
     }
 
     if (event.code === "KeyS") {
       setDNote(true);
+      document.getElementById("F3").play()
     }
 
     if (event.code === "KeyE") {
@@ -104,10 +107,12 @@ function Visualizer() {
 
     if (event.code === "KeyW") {
       setCsharpNote(false);
+      document.getElementById("ASharp").pause()
     }
 
     if (event.code === "KeyS") {
       setDNote(false);
+      // document.getElementById("F3").stop(0)
     }
 
     if (event.code === "KeyE") {
@@ -165,17 +170,21 @@ function Visualizer() {
     <div id="container">
       <div id="circleContainer">
         <ACircle />
+        
+
         <div>
           {{
             true: <ACircle />
           }[CNote]}
         </div>
         <div>
+        <audio id="ASharp" src="./src/assets/A3Sharp.mp3"></audio>
           {{
             true: <WCircle />
           }[CsharpNote]}
         </div>
         <div>
+        <audio id="F3" controls src="./src/assets/F3.mp3"></audio>
           {{
             true: <SCircle />
           }[DNote]}

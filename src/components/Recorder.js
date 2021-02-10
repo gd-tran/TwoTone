@@ -72,15 +72,25 @@ const Recorder = () => {
     osc2.stop(0);
   };
 
+  const playNoteASharp = (e) => {
+    document.getElementById("ASharp").play()
+  }
+  const playNoteF = (e) => {
+    document.getElementById("F3").play()
+  }
   return (
     <div>
       <h1>Recorder Element</h1>
       <p>Encoding a pure sine wave to an Opus file </p>
+      <button onClick={playNoteASharp}>A#</button>
+      <button onClick={playNoteF}>F</button>
+
       {/* <button onClick={record}>Sound 1</button>
       <button onClick={record2}>Sound 2</button>
       <button onClick={stopRecording}>STOP RECORDING</button>
       <audio id="test" controls></audio> */}
-      <audio controls src="./src/assets/A3Sharp.mp3"></audio>
+      <audio id="ASharp" src="./src/assets/A3Sharp.mp3"></audio>
+      <audio id="F3" controls src="./src/assets/F3.mp3"></audio>
     </div>
   );
 };
