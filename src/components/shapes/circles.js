@@ -1,5 +1,5 @@
 import React from "react";
-import '../../styles.css'
+
 
 const ACircle = () => {
   // let AStyle = {
@@ -13,7 +13,7 @@ const ACircle = () => {
   // };
 
   return (
-    <div id="test"></div>
+    <div id="ACircle" className="circle"></div>
   )
 };
 

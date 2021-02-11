@@ -15,7 +15,7 @@ import {
   JCircle,
   KCircle,
 } from "./shapes/circles";
-import "../styles.css";
+
 
 // all the components wee need for the visualizer to work will live on this compnent
 // base on the value of the state, it will render the value of the key of the obj
@@ -37,6 +37,11 @@ function Visualizer() {
   const [BNote, setBNote] = useState(false); // j
   const [highCNote, setHighCNote] = useState(false); // k
 
+
+  const audioContext = new AudioContext()
+  // const audioElement = document.getElementById("C3") 
+  // const trackC = audioContext.createMediaElementSource(audioElement)
+  // trackC.connect(audioContext.destination)
   
 
   const handleKeyDown = (event) => {
@@ -215,7 +220,7 @@ function Visualizer() {
       <audio id="B3" src="./src/assets/B3.mp3"></audio>
       <audio id="C4" src="./src/assets/C4.mp3"></audio>
       
-      <div id="circleContainer">  
+      <div className="circleContainer">  
         <div>
           {{
             true: <ACircle />
