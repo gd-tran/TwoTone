@@ -34,6 +34,12 @@
   -o-animation: fadeOut ease 7s;
   -ms-animation: fadeOut ease 7s;
 }
+
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+}
+
 @keyframes fadeOut {
   0% {
     opacity:0.5;
@@ -76,7 +82,25 @@
   }
   100% {
     opacity:0;
+  }
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:0.5;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:0.5;
+  }
 }
 
 #ACircle {
@@ -84,11 +108,6 @@
   left: 30%;
   background-color: #E1C12A;
 }
-
-
-/* //transition: opacity 2s; */
-/* transition: opacity .25s ease-in-out; */
-/* animation: fadeOut ease 8s; */
 
 #WCircle {
   position: absolute;
