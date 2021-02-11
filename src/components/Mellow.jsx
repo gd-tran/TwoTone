@@ -14,7 +14,7 @@ import {
   UDiamond,
   JDiamond,
   KDiamond,
-} from "./shapes/diamonds"
+} from "./shapes/diamonds.jsx"
 
 const Mellow = () => {
   const [CNote, setCNote] = useState(false); // a

@@ -1,10 +1,10 @@
 import React, { Component, useState, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
-import Piano from './components/Piano';
-import Mellow from './components/Mellow';
-import Filter from './components/Filter';
-import Distortion from './components/Distortion'
+import Piano from './components/Piano.jsx';
+import Mellow from './components/Mellow.jsx';
+import Filter from './components/Filter.jsx';
+import Distortion from './components/Distortion.jsx'
 import './styles.scss'
 
 const App = () => {
