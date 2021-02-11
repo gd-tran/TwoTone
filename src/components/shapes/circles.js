@@ -14,7 +14,6 @@ const ACircle = () => {
   return (
     <div>
       <div id="ACircle" style={AStyle}></div>
-      {/* <audio autoPlay src="A3.mp3"></audio> */}
     </div>
   )
 };

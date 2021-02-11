@@ -2,14 +2,14 @@
   position: absolute;
   left: 530px;
   top: 260px;
-  opacity: 1;
-  transition: opacity 0.3 ease-in-out;
+  /* opacity: 1;
+  transition: opacity 0.3 ease-in-out; */
 }
 
 #WCircle {
   position: absolute;
   left: 550px;
-  top: 260px;
+  /* top: 260px; */
 }
 
 #SCircle {
