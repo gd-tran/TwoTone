@@ -6,10 +6,10 @@ const ACircle = () => {
     padding: 10,
     margin: 20,
     display: "inline-block",
-    backgroundColor: "#393E41",
+    backgroundColor: "#E1C12A",
     borderRadius: "50%",
-    width: 100,
-    height: 100,
+    width: 140,
+    height: 140,
   };
 
   return (
@@ -22,10 +22,11 @@ const WCircle = () => {
     padding: 10,
     margin: 20,
     display: "inline-block",
-    backgroundColor: "#DC143C",
+    backgroundColor: "#F17325",
     borderRadius: "50%",
-    width: 100,
-    height: 100,
+    width: 140,
+    height: 140,
+    opacity: 0.5,
   };
 
   return <div id="WCircle" style={WStyle}></div>;
@@ -36,10 +37,11 @@ const SCircle = () => {
     padding: 10,
     margin: 20,
     display: "inline-block",
-    backgroundColor: "#FF7F00",
+    backgroundColor: "#F6616F",
     borderRadius: "50%",
-    width: 100,
-    height: 100,
+    width: 140,
+    height: 140,
+    opacity: 0.5,
   };
 
   return <div id="SCircle" style={SStyle}></div>;
@@ -50,10 +52,11 @@ const ECircle = () => {
     padding: 10,
     margin: 20,
     display: "inline-block",
-    backgroundColor: "#FFFF00",
+    backgroundColor: "#90364F",
     borderRadius: "50%",
-    width: 100,
-    height: 100,
+    width: 140,
+    height: 140,
+    opacity: 0.5,
   };
 
   return <div id="ECircle" style={EStyle}></div>;
@@ -64,10 +67,11 @@ const DCircle = () => {
     padding: 10,
     margin: 20,
     display: "inline-block",
-    backgroundColor: "#00FF00",
+    backgroundColor: "#54ABD1",
     borderRadius: "50%",
-    width: 100,
-    height: 100,
+    width: 140,
+    height: 140,
+    opacity: 0.5,
   };
 
   return <div id="DCircle" style={DStyle}></div>;
@@ -78,10 +82,11 @@ const FCircle = () => {
     padding: 10,
     margin: 20,
     display: "inline-block",
-    backgroundColor: "#0000FF",
+    backgroundColor: "#4281BD",
     borderRadius: "50%",
-    width: 100,
-    height: 100,
+    width: 140,
+    height: 140,
+    opacity: 0.5,
   };
 
   return <div id="FCircle" style={FStyle}></div>;
@@ -92,10 +97,11 @@ const TCircle = () => {
     padding: 10,
     margin: 20,
     display: "inline-block",
-    backgroundColor: "#2E2B5F",
+    backgroundColor: "#7AB44D",
     borderRadius: "50%",
-    width: 100,
-    height: 100,
+    width: 140,
+    height: 140,
+    opacity: 0.5,
   };
 
   return <div id="TCircle" style={TStyle}></div>;
@@ -106,10 +112,11 @@ const GCircle = () => {
     padding: 10,
     margin: 20,
     display: "inline-block",
-    backgroundColor: "#FF5733",
+    backgroundColor: "#F59B36",
     borderRadius: "50%",
-    width: 100,
-    height: 100,
+    width: 140,
+    height: 140,
+    opacity: 0.5,
   };
 
   return <div id="GCircle" style={GStyle}></div>;
@@ -120,10 +127,11 @@ const YCircle = () => {
     padding: 10,
     margin: 20,
     display: "inline-block",
-    backgroundColor: "#3386FF",
+    backgroundColor: "#E23E33",
     borderRadius: "50%",
-    width: 100,
-    height: 100,
+    width: 140,
+    height: 140,
+    opacity: 0.5,
   };
 
   return <div id="YCircle" style={YStyle}></div>;
@@ -134,10 +142,11 @@ const HCircle = () => {
     padding: 10,
     margin: 20,
     display: "inline-block",
-    backgroundColor: "#E033FF",
+    backgroundColor: "#9C3342",
     borderRadius: "50%",
-    width: 100,
-    height: 100,
+    width: 140,
+    height: 140,
+    opacity: 0.5,
   };
 
   return <div id="HCircle" style={HStyle}></div>;
@@ -148,10 +157,11 @@ const UCircle = () => {
     padding: 10,
     margin: 20,
     display: "inline-block",
-    backgroundColor: "#8B00FF",
+    backgroundColor: "#4DA7D2",
     borderRadius: "50%",
-    width: 100,
-    height: 100,
+    width: 140,
+    height: 140,
+    opacity: 0.5,
   };
 
   return <div id="UCircle" style={UStyle}></div>;
@@ -162,10 +172,11 @@ const JCircle = () => {
     padding: 10,
     margin: 20,
     display: "inline-block",
-    backgroundColor: "#393E41",
+    backgroundColor: "#76B149",
     borderRadius: "50%",
-    width: 100,
-    height: 100,
+    width: 140,
+    height: 140,
+    opacity: 0.5,
   };
 
   return <div id="JCircle" style={JStyle}></div>;
@@ -176,10 +187,11 @@ const KCircle = () => {
     padding: 10,
     margin: 20,
     display: "inline-block",
-    backgroundColor: "#DC143C",
+    backgroundColor: "#DABD26",
     borderRadius: "50%",
-    width: 100,
-    height: 100,
+    width: 140,
+    height: 140,
+    opacity: 0.5,
   };
 
   return <div id="KCircle" style={KStyle}></div>;

@@ -1,32 +1,37 @@
 
 #ACircle {
   position: absolute;
-  left: 15%;
+  left: 30%;
+  opacity: 0.5;
 }
+
+/* //transition: opacity 2s; */
+/* transition: opacity .25s ease-in-out; */
+/* animation: fadeOut ease 8s; */
 
 #WCircle {
   position: absolute;
-  left: 20%;
+  left: 32.5%;
 }
 
 #SCircle {
   position: absolute;
-  left: 25%;
+  left: 35%;
 }
 
 #ECircle {
   position: absolute;
-  left: 30%;
+  left: 37.5%;
 }
 
 #DCircle {
   position: absolute;
-  left: 35%;
+  left: 40%;
 }
 
 #FCircle {
   position: absolute;
-  left: 40%;
+  left: 42.5%;
 }
 
 #TCircle {
@@ -36,31 +41,31 @@
 
 #GCircle {
   position: absolute;
-  left: 50%;
+  left: 47.5%;
 }
 #YCircle {
   position: absolute;
-  left: 55%;
+  left: 50%;
 }
 
 #HCircle {
   position: absolute;
-  left: 60%;
+  left: 52.5%;
 }
 
 #UCircle {
   position: absolute;
-  left: 65%;
+  left: 55%;
 }
 
 #JCircle {
   position: absolute;
-  left: 70%;
+  left: 57.5%;
 }
 
 #KCircle {
   position: absolute;
-  left: 75%;
+  left: 60%;
 }
 
 #container {
