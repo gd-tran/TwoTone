@@ -21,7 +21,7 @@ import {
 // the state gets updated every time a new key is pressed
 // updates state usinh setShapes; pass the new value of state in an array
 
-function Sound2() {
+function Filter() {
   const [CNote, setCNote] = useState(false); // a
   const [CsharpNote, setCsharpNote] = useState(false); // w
   const [DNote, setDNote] = useState(false); // s
@@ -399,4 +399,4 @@ function Sound2() {
 export default connect(
   null,
   {} //pass in actions here
-)(Sound2);
+)(Filter);

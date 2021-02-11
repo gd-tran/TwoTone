@@ -21,7 +21,7 @@ import {
 // the state gets updated every time a new key is pressed
 // updates state usinh setShapes; pass the new value of state in an array
 
-function Visualizer() {
+const Piano = () => {
   const [CNote, setCNote] = useState(false); // a
   const [CsharpNote, setCsharpNote] = useState(false); // w
   const [DNote, setDNote] = useState(false); // s
@@ -267,6 +267,14 @@ function Visualizer() {
     }
   };
 
+  // const changeShape = () => {
+  //   if (shape === 'circle') {
+  //     setShape('diamond');
+  //   } else if (shape === 'diamond') {
+  //     setShape('circle')
+  //   }
+  // }
+
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
     window.addEventListener("keyup", handleKeyUp);
@@ -276,11 +284,9 @@ function Visualizer() {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
-
   return (
     <div>
       <div>
-        <button onClick={record}>TRIGGER FILTER</button>
         <audio id="C3" src="./src/assets/C3.mp3"></audio>
         <audio id="C3Sharp" src="./src/assets/C3Sharp.mp3"></audio>
         <audio id="D3" src="./src/assets/D3.mp3"></audio>
@@ -392,9 +398,10 @@ function Visualizer() {
       </div>
     </div>
   );
+
 }
 
 export default connect(
   null,
   {} //pass in actions here
-)(Visualizer);
+)(Piano);
