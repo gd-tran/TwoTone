@@ -1,12 +1,12 @@
 import React from "react";
 
 
-const ACircle = () => {
-  return <div id="ACircle" className="diamond fade-out"></div>
+const ACircle = ( ) => {
+  return <div id="ACircle" className="circle fade-out"></div>
 };
 
 const WCircle = () => {
-  return <div id="WCircle" className="circle fade-out" ></div>;
+  return <div id="WCircle" className="circle fade-out"></div>;
 };
 
 const SCircle = () => {

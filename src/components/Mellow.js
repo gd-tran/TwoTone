@@ -1,28 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import {
-  ACircle,
-  WCircle,
-  SCircle,
-  ECircle,
-  DCircle,
-  FCircle,
-  TCircle,
-  GCircle,
-  YCircle,
-  HCircle,
-  UCircle,
-  JCircle,
-  KCircle,
-} from "./shapes/circles";
+  ADiamond,
+  WDiamond,
+  SDiamond,
+  EDiamond,
+  DDiamond,
+  FDiamond,
+  TDiamond,
+  GDiamond,
+  YDiamond,
+  HDiamond,
+  UDiamond,
+  JDiamond,
+  KDiamond,
+} from "./shapes/diamonds"
 
-
-// all the components wee need for the visualizer to work will live on this compnent
-// base on the value of the state, it will render the value of the key of the obj
-// the state gets updated every time a new key is pressed
-// updates state usinh setShapes; pass the new value of state in an array
-
-function Visualizer() {
+const Mellow = () => {
   const [CNote, setCNote] = useState(false); // a
   const [CsharpNote, setCsharpNote] = useState(false); // w
   const [DNote, setDNote] = useState(false); // s
@@ -37,45 +31,48 @@ function Visualizer() {
   const [BNote, setBNote] = useState(false); // j
   const [highCNote, setHighCNote] = useState(false); // k
 
+
   
-  const record = (e) => {
-    let clicked = false;
-    const chunks = [];
-    const ac = new AudioContext()
-    const dest = ac.createMediaStreamDestination();
-    const biquad = ac.createBiquadFilter()
-    const distortion = ac.createWaveShaper()
-    const mediaRecorder = new MediaRecorder(dest.stream);
-    if (!clicked) {
-      // const captureStream = ele.captureStream()
-      const track2 = ac.createMediaElementSource(document.getElementById("E3"))
-      const track1 = ac.createMediaElementSource(document.getElementById("C3"))
-      biquad.type = "hishelf";
-      track1.connect(biquad)
-      track2.connect(biquad)
-      // distortion.connect(biquad)
-      biquad.connect(ac.destination)
-      // track2.connect(dest)
-      // track1.connect(ac.destination)
-      // track2.connect(ac.destination)
-      // mediaRecorder.connect(ac.destination)
-      // mediaRecorder.start();
-      // e.target.textContent = "Stop recording";
-      // clicked = true;
-    } else {
-      mediaRecorder.stop();
-      e.target.disabled = true;
-    }
+  
+   
+  //   const ac = new AudioContext()
+  //   const dest = ac.createMediaStreamDestination();
+  //   const biquad = ac.createBiquadFilter()
+
+  //   const mediaRecorder = new MediaRecorder(dest.stream);
+  //   if (!clicked) {
+  //     // const captureStream = ele.captureStream()
+  //     const track2 = ac.createMediaElementSource(document.getElementById("E3"))
+  //     const track1 = ac.createMediaElementSource(document.getElementById("C3"))
+  //     biquad.type = "hishelf";
+  //     track1.connect(biquad)
+  //     track2.connect(biquad)
+  //     // distortion.connect(biquad)
+  //     biquad.connect(ac.destination)
+  //     // track2.connect(dest)
+  //     // track1.connect(ac.destination)
+  //     // track2.connect(ac.destination)
+  //     // mediaRecorder.connect(ac.destination)
+  //     // mediaRecorder.start();
+  //     // e.target.textContent = "Stop recording";
+  //     // clicked = true;
+  //   } else {
+  //     mediaRecorder.stop();
+  //     e.target.disabled = true;
+  //   }
     
-    mediaRecorder.ondataavailable = (e) => {
-      // push each chunk (blobs) in an array
-      chunks.push(e.data);
-    };
-    mediaRecorder.onstop = (e) => {
-      const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
-      document.getElementById("blob").src = URL.createObjectURL(blob);
-    };
-  };
+  //   mediaRecorder.ondataavailable = (e) => {
+  //     // push each chunk (blobs) in an array
+  //     chunks.push(e.data);
+  //   };
+  //   mediaRecorder.onstop = (e) => {
+  //     const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
+  //     document.getElementById("blob").src = URL.createObjectURL(blob);
+  //   };
+  // };
+    
+    
+ 
 
   const handleKeyDown = (event) => {
     //updates state using
@@ -238,7 +235,14 @@ function Visualizer() {
     }
   }
 
- 
+  const changeShape = () => {
+    if (shape === 'circle') {
+      setShape('diamond');
+    } else if (shape === 'diamond') {
+      setShape('circle')
+    }
+  }
+
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
     window.addEventListener("keyup", handleKeyUp)
@@ -249,11 +253,9 @@ function Visualizer() {
     };
   }, []);
   
-
   return (
     <div>
       <div>
-        <button onClick={record}>TRIGGER FILTER</button>
         <audio id="C3" src="./src/assets/C3.mp3"></audio>
         <audio id="C3Sharp" src="./src/assets/C3Sharp.mp3"></audio>
         <audio id="D3" src="./src/assets/D3.mp3"></audio>
@@ -272,67 +274,67 @@ function Visualizer() {
         <div id="circleContainer">  
           <div>
             {{
-              true: <ACircle />
+              true: <ADiamond />
             }[CNote]}
           </div>
           <div>
             {{
-              true: <WCircle />
+              true: <WDiamond />
             }[CsharpNote]}
           </div>
           <div>
             {{
-              true: <SCircle />
+              true: <SDiamond />
             }[DNote]}
           </div>
           <div>
             {{
-              true: <ECircle />
+              true: <EDiamond />
             }[DsharpNote]}
           </div>
           <div>
             {{
-              true: <DCircle />
+              true: <DDiamond />
             }[ENote]}
           </div>
           <div>
             {{
-              true: <FCircle />
+              true: <FDiamond />
             }[FNote]}
           </div>
           <div>
             {{
-              true: <TCircle />
+              true: <TDiamond />
             }[FsharpNote]}
           </div>
           <div>
             {{
-              true: <GCircle />
+              true: <GDiamond />
             }[GNote]}
           </div>
           <div>
             {{
-              true: <YCircle />
+              true: <YDiamond />
             }[GsharpNote]}
           </div>
           <div>
             {{
-              true: <HCircle />
+              true: <HDiamond />
             }[ANote]}
           </div>
           <div>
             {{
-              true: <UCircle />
+              true: <UDiamond />
             }[AsharpNote]}
           </div>
           <div>
             {{
-              true: <JCircle />
+              true: <JDiamond />
             }[BNote]}
           </div>
           <div>
             {{
-              true: <KCircle />
+              true: <KDiamond />
             }[highCNote]}
           </div>
         </div>
@@ -344,4 +346,4 @@ function Visualizer() {
 export default connect(
   null,
   {} //pass in actions here
-)(Visualizer);
+)(Mellow);

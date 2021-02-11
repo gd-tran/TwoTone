@@ -5,8 +5,8 @@ const Control = () => {
   let clicked2 = false;
 
   const chunks = [];
-  const ac = new AudioContext();
-  const dest = ac.createMediaStreamDestination();
+  const test = new AudioContext();
+  const dest = test.createMediaStreamDestination();
   const mediaRecorder = new MediaRecorder(dest.stream);
   
   mediaRecorder.ondataavailable = (e) => {
@@ -23,9 +23,8 @@ const Control = () => {
 
   const record = (e) => {
     if (!clicked1) {
-      
-      const trackF = ac.createMediaElementSource(document.getElementById("F3"))
-      const trackAsharp = ac.createMediaElementSource(document.getElementById("ASharp"))
+      const trackF = test.createMediaElementSource(document.getElementById("F3"))
+      const trackAsharp = test.createMediaElementSource(document.getElementById("ASharp"))
       trackF.connect(dest)
       trackAsharp.connect(dest)
       mediaRecorder.start();
@@ -68,4 +67,4 @@ const Control = () => {
   );
 };
 
-// export { Control };
+export { Control };
