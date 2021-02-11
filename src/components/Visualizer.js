@@ -40,7 +40,7 @@ function Visualizer() {
   
 
   const handleKeyDown = (event) => {
-    //updates state usin
+    //updates state using
     if (event.code === "KeyA") {
       setCNote(true);
       document.getElementById("C3").play()
@@ -215,22 +215,18 @@ function Visualizer() {
       <audio id="B3" src="./src/assets/B3.mp3"></audio>
       <audio id="C4" src="./src/assets/C4.mp3"></audio>
       
-      <div id="circleContainer">
-        <ACircle />
-        
+      <div id="circleContainer">  
         <div>
           {{
             true: <ACircle />
           }[CNote]}
         </div>
         <div>
-        {/* <audio id="C3" src="./src/assets/C3.mp3"></audio> */}
           {{
             true: <WCircle />
           }[CsharpNote]}
         </div>
         <div>
-        {/* <audio id="F3" controls src="./src/assets/F3.mp3"></audio> */}
           {{
             true: <SCircle />
           }[DNote]}
