@@ -52,13 +52,11 @@ function Distortion() {
     "C4",
   ];
 
-  const record = (e) => {
-    let clicked = false;
-    const chunks = [];
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("keyup", handleKeyUp);
     const ac = new AudioContext();
-    const dest = ac.createMediaStreamDestination();
-    const biquad = ac.createBiquadFilter();
- 
+    const biquad = ac.createBiquadFilter(); 
     const distortion = ac.createWaveShaper();
     function makeDistortionCurve(amount) {
       var k = typeof amount === "number" ? amount : 50,
@@ -74,43 +72,22 @@ function Distortion() {
       return curve;
     }
     distortion.curve = makeDistortionCurve(100);
-    
-    const mediaRecorder = new MediaRecorder(dest.stream);
     biquad.type = "lowshelf";
     biquad.frequency.value = 1000
-    if (!clicked) {
-      let elementSources = [];
-      for (let i = 0; i < nodes.length; i++) {
-         let newNode = ac.createMediaElementSource(document.getElementById(nodes[i]));
-         newNode.connect(biquad)
-         biquad.connect(distortion)
-            
-        }
-      // elementSources.forEach(x => {
-      //   console.log('for loop')
-      //   x.connect(biquad)
-      // });
-      distortion.connect(ac.destination)
-          // const track2 = ac.createMediaElementSource(document.getElementById("E3"));
-          // const track1 = ac.createMediaElementSource(document.getElementById("C3"));
-          // track1.connect(biquad)
-          // track2.connect(biquad)
-     
-    } else {
-      // mediaRecorder.stop();
-      e.target.disabled = true;
-    }
+    for (let i = 0; i < nodes.length; i++) {
+        let newNode = ac.createMediaElementSource(document.getElementById(nodes[i]));
+        newNode.connect(biquad)
+        biquad.connect(distortion)  
+      }
+    
+    distortion.connect(ac.destination) 
 
-    mediaRecorder.ondataavailable = (e) => {
-      // push each chunk (blobs) in an array
-      chunks.push(e.data);
-    };
-    mediaRecorder.onstop = (e) => {
-      const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
-      document.getElementById("blob").src = URL.createObjectURL(blob);
-    };
-  };
 
+    // cleanup this component
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };  
+  }, []);
   const handleKeyDown = (event) => {
     if (event.code === "KeyA") {
       setCNote(true);
@@ -271,20 +248,11 @@ function Distortion() {
     }
   };
 
-  useEffect(() => {
-    window.addEventListener("keydown", handleKeyDown);
-    window.addEventListener("keyup", handleKeyUp);
-
-    // cleanup this component
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
+  
 
   return (
     <div>
       <div>
-        <button onClick={record}>TRIGGER FILTER</button>
         <audio id="C3" src="./src/assets/C3.mp3"></audio>
         <audio id="C3Sharp" src="./src/assets/C3Sharp.mp3"></audio>
         <audio id="D3" src="./src/assets/D3.mp3"></audio>

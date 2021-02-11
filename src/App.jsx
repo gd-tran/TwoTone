@@ -3,10 +3,6 @@ import { Switch, Route } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 import Piano from './components/Piano';
 import Mellow from './components/Mellow';
-import Filter from './components/Filter'
-import { Recorder } from './components/Recorder';
-import { Settings } from './components/Settings';
-import { Control } from './components/Control';
 import Filter from './components/Filter';
 import Distortion from './components/Distortion'
 import './styles.scss'
@@ -26,15 +22,16 @@ const App = () => {
   }
 
   return (
-    <div>
-      <button value="Piano" onClick={handleClick}>Piano</button>
-      <button value="Mellow" onClick={handleClick}>Mellow</button>
-      <button value="Filter" onClick={handleClick}>Filter</button>
+    <div className="windowDiv">
+      <button className="routeButton" style={{backgroundColor: "#7AB44D" }} value="Piano" onClick={handleClick}></button>
+      <button className="routeButton" style={{backgroundColor: "#7AB44F" }} value="Mellow" onClick={handleClick}></button>
+      <button className="routeButton" style={{backgroundColor: "#7AB44D" }} value="Filter" onClick={handleClick}></button>
       <Switch>
-      <Route exact path='/filter'>
+        <Route exact path='/filter'>
           <Filter />
         </Route>
         <Route exact path='/mellow'>
+          {/* <Distortion /> */}
           <Mellow />
         </Route>
         <Route path='/'>

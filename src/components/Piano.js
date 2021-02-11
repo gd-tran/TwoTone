@@ -52,60 +52,6 @@ const Piano = () => {
     "C4",
   ];
 
-  const record = (e) => {
-    let clicked = false;
-    const chunks = [];
-    const ac = new AudioContext();
-    const dest = ac.createMediaStreamDestination();
-    const biquad = ac.createBiquadFilter();
-    const distortion = ac.createWaveShaper();
-
-    function makeDistortionCurve(amount) {
-      var k = typeof amount === "number" ? amount : 50,
-        n_samples = 44100,
-        curve = new Float32Array(n_samples),
-        deg = Math.PI / 180,
-        i = 0,
-        x;
-      for (; i < n_samples; ++i) {
-        x = (i * 2) / n_samples - 1;
-        curve[i] = ((3 + k) * x * 20 * deg) / (Math.PI + k * Math.abs(x));
-      }
-      return curve;
-    }
-    distortion.curve = makeDistortionCurve(400);
-    // const mediaRecorder = new MediaRecorder(dest.stream);
-    biquad.type = "hishelf";
-    if (!clicked) {
-      // const captureStream = ele.captureStream()
-      const selectedNodes = [];
-      distortion.oversample = '4x';
-      for (let i = 0; i < nodes.length; i++) {
-        const newNode = ac.creatMediaElementSource(
-          document.getElementById(nodes[i])
-          );
-          // newNode.connect(biquad);
-          newNode.connect(distortion);
-          // biquad.connect(distortion);
-        }
-        // const track2 = ac.createMediaElementSource(document.getElementById("E3"));
-        distortion.connect(ac.destination)
-    
-    
-    } else {
-      mediaRecorder.stop();
-      e.target.disabled = true;
-    }
-
-    mediaRecorder.ondataavailable = (e) => {
-      // push each chunk (blobs) in an array
-      chunks.push(e.data);
-    };
-    mediaRecorder.onstop = (e) => {
-      const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
-      document.getElementById("blob").src = URL.createObjectURL(blob);
-    };
-  };
 
   const handleKeyDown = (event) => {
     if (event.code === "KeyA") {
@@ -266,14 +212,6 @@ const Piano = () => {
       document.getElementById("C4").currentTime = 0;
     }
   };
-
-  // const changeShape = () => {
-  //   if (shape === 'circle') {
-  //     setShape('diamond');
-  //   } else if (shape === 'diamond') {
-  //     setShape('circle')
-  //   }
-  // }
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
