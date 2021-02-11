@@ -1,188 +1,56 @@
 import React from "react";
-import '../../styles.css'
+
 
 const ACircle = () => {
-  // let AStyle = {
-  //   // padding: 10,
-  //   // margin: 20,
-  //   display: "inline-block",
-  //   backgroundColor: "#393E41",
-  //   borderRadius: "50%",
-  //   width: 120,
-  //   height: 120,
-  // };
-
-  return (
-    <div id="test"></div>
-  )
+  return <div id="ACircle" className="diamond fade-out"></div>
 };
 
 const WCircle = () => {
-  let WStyle = {
-    padding: 10,
-    margin: 20,
-    display: "inline-block",
-    backgroundColor: "#DC143C",
-    borderRadius: "50%",
-    width: 100,
-    height: 100,
-  };
-
-  return <div id="WCircle" style={WStyle}></div>;
+  return <div id="WCircle" className="circle fade-out" ></div>;
 };
 
 const SCircle = () => {
-  let SStyle = {
-    padding: 10,
-    margin: 20,
-    display: "inline-block",
-    backgroundColor: "#FF7F00",
-    borderRadius: "50%",
-    width: 100,
-    height: 100,
-  };
-
-  return <div id="SCircle" style={SStyle}></div>;
+  return <div id="SCircle" className="circle fade-out"></div>;
 };
 
 const ECircle = () => {
-  let EStyle = {
-    padding: 10,
-    margin: 20,
-    display: "inline-block",
-    backgroundColor: "#FFFF00",
-    borderRadius: "50%",
-    width: 100,
-    height: 100,
-  };
-
-  return <div id="ECircle" style={EStyle}></div>;
+  return <div id="ECircle" className="circle fade-out"></div>;
 };
 
 const DCircle = () => {
-  let DStyle = {
-    padding: 10,
-    margin: 20,
-    display: "inline-block",
-    backgroundColor: "#00FF00",
-    borderRadius: "50%",
-    width: 100,
-    height: 100,
-  };
-
-  return <div id="DCircle" style={DStyle}></div>;
+  return <div id="DCircle" className="circle fade-out"></div>;
 };
 
 const FCircle = () => {
-  let FStyle = {
-    padding: 10,
-    margin: 20,
-    display: "inline-block",
-    backgroundColor: "#0000FF",
-    borderRadius: "50%",
-    width: 100,
-    height: 100,
-  };
-
-  return <div id="FCircle" style={FStyle}></div>;
+  return <div id="FCircle" className="circle fade-out"></div>;
 };
 
 const TCircle = () => {
-  let TStyle = {
-    padding: 10,
-    margin: 20,
-    display: "inline-block",
-    backgroundColor: "#2E2B5F",
-    borderRadius: "50%",
-    width: 100,
-    height: 100,
-  };
-
-  return <div id="TCircle" style={TStyle}></div>;
+  return <div id="TCircle" className="circle fade-out"></div>;
 };
 
 const GCircle = () => {
-  let GStyle = {
-    padding: 10,
-    margin: 20,
-    display: "inline-block",
-    backgroundColor: "#FF5733",
-    borderRadius: "50%",
-    width: 100,
-    height: 100,
-  };
-
-  return <div id="GCircle" style={GStyle}></div>;
+  return <div id="GCircle" className="circle fade-out"></div>;
 };
 
 const YCircle = () => {
-  let YStyle = {
-    padding: 10,
-    margin: 20,
-    display: "inline-block",
-    backgroundColor: "#3386FF",
-    borderRadius: "50%",
-    width: 100,
-    height: 100,
-  };
-
-  return <div id="YCircle" style={YStyle}></div>;
+  return <div id="YCircle" className="circle fade-out"></div>;
 };
 
 const HCircle = () => {
-  let HStyle = {
-    padding: 10,
-    margin: 20,
-    display: "inline-block",
-    backgroundColor: "#E033FF",
-    borderRadius: "50%",
-    width: 100,
-    height: 100,
-  };
-
-  return <div id="HCircle" style={HStyle}></div>;
+  return <div id="HCircle" className="circle fade-out"></div>;
 };
 
 const UCircle = () => {
-  let UStyle = {
-    padding: 10,
-    margin: 20,
-    display: "inline-block",
-    backgroundColor: "#8B00FF",
-    borderRadius: "50%",
-    width: 100,
-    height: 100,
-  };
-
-  return <div id="UCircle" style={UStyle}></div>;
+  return <div id="UCircle" className="circle fade-out"></div>;
 };
 
 const JCircle = () => {
-  let JStyle = {
-    padding: 10,
-    margin: 20,
-    display: "inline-block",
-    backgroundColor: "#393E41",
-    borderRadius: "50%",
-    width: 100,
-    height: 100,
-  };
-
-  return <div id="JCircle" style={JStyle}></div>;
+  return <div id="JCircle" className="circle fade-out"></div>;
 };
 
 const KCircle = () => {
-  let KStyle = {
-    padding: 10,
-    margin: 20,
-    display: "inline-block",
-    backgroundColor: "#DC143C",
-    borderRadius: "50%",
-    width: 100,
-    height: 100,
-  };
-
-  return <div id="KCircle" style={KStyle}></div>;
+  return <div id="KCircle" className="circle fade-out"></div>;
 };
 
 export {

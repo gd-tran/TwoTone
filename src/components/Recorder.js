@@ -1,18 +1,18 @@
 import React from "react";
 // import A from "./sounds/Piano_Roll_A3#.mp3";
 const Recorder = () => {
-  let clicked1 = false;
-  let clicked2 = false;
-  const chunks = [];
-  const ac = new AudioContext();
+  // let clicked1 = false;
+  // let clicked2 = false;
+  // const chunks = [];
+  // const ac = new AudioContext();
 
-  const osc1 = ac.createOscillator();
-  const osc2 = ac.createOscillator();
-  osc2.type = "sine";
-  const dest = ac.createMediaStreamDestination();
-  const mediaRecorder = new MediaRecorder(dest.stream);
-  osc1.connect(dest);
-  osc2.connect(dest);
+  // const osc1 = ac.createOscillator();
+  // const osc2 = ac.createOscillator();
+  // osc2.type = "sine";
+  // const dest = ac.createMediaStreamDestination();
+  // const mediaRecorder = new MediaRecorder(dest.stream);
+  // osc1.connect(dest);
+  // osc2.connect(dest);
 
 
   // ASound.play();
@@ -52,7 +52,7 @@ const Recorder = () => {
   const record2 = (e) => {
     console.log("sound2");
     if (!clicked2) {
-      // mediaRecorder.start();
+      mediaRecorder.start();
       osc2.frequency.value = 660;
       osc2.start(0);
       e.target.textContent = "Stop recording";
@@ -85,14 +85,14 @@ const Recorder = () => {
       <button onClick={playNoteASharp}>A#</button>
       <button onClick={playNoteF}>F</button>
 
-      {/* <button onClick={record}>Sound 1</button>
+      <button onClick={record}>Sound 1</button>
       <button onClick={record2}>Sound 2</button>
       <button onClick={stopRecording}>STOP RECORDING</button>
-      <audio id="test" controls></audio> */}
+      <audio id="test" controls></audio>
       <audio id="ASharp" src="./src/assets/A3Sharp.mp3"></audio>
       <audio id="F3" controls src="./src/assets/F3.mp3"></audio>
     </div>
   );
 };
 
-export { Recorder };
+// export { Recorder };
