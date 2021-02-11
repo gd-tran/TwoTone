@@ -1,5 +1,5 @@
 .circle {
-  opacity: 0.5;
+  opacity: 1;
   padding: 10;
   margin: 20;
   display: inline-block;
@@ -9,7 +9,7 @@
 }
 
 .diamond {
-  opacity: 0.5;
+  opacity: 1;
   padding: 10;
   margin-left: 40;
   display: inline-block;
@@ -27,12 +27,26 @@
   border-radius: 50%;
 }
 
+.square {
+  width: 100;
+  height: 100;
+  opacity: 1;
+}
+
 .fade-out {
-  animation: fadeOut ease 7s;
-  -webkit-animation: fadeOut ease 7s;
-  -moz-animation: fadeOut ease 7s;
-  -o-animation: fadeOut ease 7s;
-  -ms-animation: fadeOut ease 7s;
+  animation: fadeOut ease 6s;
+  -webkit-animation: fadeOut ease 6s;
+  -moz-animation: fadeOut ease 6s;
+  -o-animation: fadeOut ease 6s;
+  -ms-animation: fadeOut ease 6s;
+}
+
+.fade-out-distortion {
+  animation: fadeOut ease 2s;
+  -webkit-animation: fadeOut ease 2s;
+  -moz-animation: fadeOut ease 2s;
+  -o-animation: fadeOut ease 2s;
+  -ms-animation: fadeOut ease 2s;
 }
 
 .fade-in {
@@ -42,7 +56,7 @@
 
 @keyframes fadeOut {
   0% {
-    opacity:0.5;
+    opacity:1;
   }
   100% {
     opacity:0;
@@ -51,7 +65,7 @@
 
 @-moz-keyframes fadeOut {
   0% {
-    opacity:0.5;
+    opacity:1;
   }
   100% {
     opacity:0;
@@ -60,7 +74,7 @@
 
 @-webkit-keyframes fadeOut {
   0% {
-    opacity:0.5;
+    opacity:1;
   }
   100% {
     opacity:0;
@@ -69,7 +83,7 @@
 
 @-o-keyframes fadeOut {
   0% {
-    opacity:0.5;
+    opacity:1;
   }
   100% {
     opacity:0;
@@ -78,7 +92,7 @@
 
 @-ms-keyframes fadeOut {
   0% {
-    opacity:0.5;
+    opacity:1;
   }
   100% {
     opacity:0;
@@ -106,49 +120,49 @@
 #ACircle {
   position: absolute;
   left: 30%;
-  background-color: #E1C12A;
+  background-color: #F240DA;
 }
 
 #WCircle {
   position: absolute;
   left: 32.5%;
-  background-color: #F17325;
+  background-color: #F24055;
 }
 
 #SCircle {
   position: absolute;
   left: 35%;
-  background-color: #F6616f
+  background-color: #F2B140
 }
 
 #ECircle {
   position: absolute;
   left: 37.5%;
-  background-color: #90364F;
+  background-color: #AEF240;
 }
 
 #DCircle {
   position: absolute;
   left: 40%;
-  background-color: #54ABD1
+  background-color: #40F258
 }
 
 #FCircle {
   position: absolute;
   left: 42.5%;
-  background-color: #4281BD
+  background-color: #40F2DD
 }
 
 #TCircle {
   position: absolute;
   left: 45%;
-  background-color: #7AB44D
+  background-color: #4081F2
 }
 
 #GCircle {
   position: absolute;
   left: 47.5%;
-  background-color: #F59B36
+  background-color: #8440F2
 }
 #YCircle {
   position: absolute;
