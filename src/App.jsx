@@ -14,9 +14,9 @@ const App = () => {
           <Landing />
         </Route>
         <Route exact path='/visualizer'> */}
-          {/* <Visualizer />
-          <Recorder /> */}
-          <Control />
+          <Visualizer />
+          {/* <Recorder /> */}
+          {/* <Control /> */}
         {/* </Route>
       </Switch> */}
     </div>

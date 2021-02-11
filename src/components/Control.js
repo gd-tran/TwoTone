@@ -3,6 +3,7 @@ import React from "react";
 const Control = () => {
   let clicked1 = false;
   let clicked2 = false;
+
   const chunks = [];
   const ac = new AudioContext();
   const dest = ac.createMediaStreamDestination();
@@ -21,9 +22,12 @@ const Control = () => {
 
 
   const record = (e) => {
-    console.log("sound1");
     if (!clicked1) {
-      const mediaStream = new MediaStream(document.getElementById("F3"))
+      
+      const trackF = ac.createMediaElementSource(document.getElementById("F3"))
+      const trackAsharp = ac.createMediaElementSource(document.getElementById("ASharp"))
+      trackF.connect(dest)
+      trackAsharp.connect(dest)
       mediaRecorder.start();
       
       e.target.textContent = "Stop recording";
@@ -48,7 +52,7 @@ const Control = () => {
     document.getElementById("F3").play()
   }
   return (
-    <div>
+    <div className="holder">
       <h1>Recorder Element</h1>
       <p>Encoding a pure sine wave to an Opus file </p>
       <button onClick={playNoteASharp}>A#</button>
@@ -64,4 +68,4 @@ const Control = () => {
   );
 };
 
-export { Control };
+// export { Control };
