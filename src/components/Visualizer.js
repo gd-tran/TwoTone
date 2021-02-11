@@ -284,8 +284,6 @@ function Visualizer() {
   );
 }
 
-//import { ACircle, WCircle, SCircle, ECircle, DCircle, FCircle, TCircle, UCircle, JCircle, KCircle } from './shapes/circles';
-
 export default connect(
   null,
   {} //pass in actions here
