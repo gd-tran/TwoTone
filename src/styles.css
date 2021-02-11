@@ -1,92 +1,85 @@
+#test {
+  display: inline-block;
+  border-Radius: 50%;
+  width: 120;
+  height: 120;
+  background-color: "#393E41",
+}
+
 #ACircle {
-  position: absolute;
-  left: 530px;
-  top: 260px;
-  opacity: 1;
-  transition: opacity 0.3 ease-in-out;
+  background-color: "#393E41",
 }
 
 #WCircle {
-  position: absolute;
-  left: 550px;
-  top: 260px;
+  background-color: "#DC143C",
 }
 
 #SCircle {
-  position: absolute;
-  left: 570px;
-  top: 260px;
+  background-color: "#FF7F00",
 }
+
 #ECircle {
-  position: absolute;
-  left: 570px;
-  top: 260px;
+  background-color: "#FFFF00",
 }
 
 #DCircle {
-  position: absolute;
-  left: 580px;
-  top: 260px;
+  background-color: "#00FF00",
 }
 
 #FCircle {
-  position: absolute;
-  left: 590px;
-  top: 260px;
+  background-color: "#0000FF",
 }
 
 #TCircle {
-  position: absolute;
-  left: 600px;
-  top: 260px;
+  background-color: "#2E2B5F",
 }
 
 #GCircle {
-  position: absolute;
-  left: 610px;
-  top: 260px;
+  background-color: "#FF5733",
 }
 #YCircle {
   position: absolute;
   left: 620px;
-  top: 260px;
+  /* top: 260px; */
+  background-color: "#3386FF",
 }
 
 #HCircle {
   position: absolute;
   left: 630px;
-  top: 260px;
+  /* top: 260px; */
 }
 
 #UCircle {
   position: absolute;
   left: 640px;
-  top: 260px;
+  /* top: 260px; */
 }
 
 #JCircle {
   position: absolute;
   left: 650px;
-  top: 260px;
+  /* top: 260px; */
 }
 
 #KCircle {
   position: absolute;
   left: 660px;
-  top: 260px;
+  /* top: 260px; */
 }
 
 #container {
   width: 100%;
   height: 100%;
-  background-color: black;
+  /* background-color: black; */
 }
 
 #circleContainer {
   display: flex;
   justify-content: center;
-  background-color: black;
- 
+  width: 100%;
+  height: 120px;
+  background-color: green
 }
 
 
