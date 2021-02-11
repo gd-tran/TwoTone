@@ -21,7 +21,7 @@ import {
 // the state gets updated every time a new key is pressed
 // updates state usinh setShapes; pass the new value of state in an array
 
-function Sound2() {
+function Distortion() {
   const [CNote, setCNote] = useState(false); // a
   const [CsharpNote, setCsharpNote] = useState(false); // w
   const [DNote, setDNote] = useState(false); // s
@@ -58,8 +58,8 @@ function Sound2() {
     const ac = new AudioContext();
     const dest = ac.createMediaStreamDestination();
     const biquad = ac.createBiquadFilter();
-    // distortion.oversample = '4x';
-    // const distortion = ac.createWaveShaper();
+ 
+    const distortion = ac.createWaveShaper();
     function makeDistortionCurve(amount) {
       var k = typeof amount === "number" ? amount : 50,
         n_samples = 44100,
@@ -73,22 +73,24 @@ function Sound2() {
       }
       return curve;
     }
-    distortion.curve = makeDistortionCurve(400);
+    distortion.curve = makeDistortionCurve(100);
+    
     const mediaRecorder = new MediaRecorder(dest.stream);
-    // biquad.frequency.value = 3000
-    biquad.type = 'lowpass';
+    biquad.type = "lowshelf";
+    biquad.frequency.value = 1000
     if (!clicked) {
       let elementSources = [];
       for (let i = 0; i < nodes.length; i++) {
          let newNode = ac.createMediaElementSource(document.getElementById(nodes[i]));
          newNode.connect(biquad)
+         biquad.connect(distortion)
             
         }
       // elementSources.forEach(x => {
       //   console.log('for loop')
       //   x.connect(biquad)
       // });
-      biquad.connect(ac.destination)
+      distortion.connect(ac.destination)
           // const track2 = ac.createMediaElementSource(document.getElementById("E3"));
           // const track1 = ac.createMediaElementSource(document.getElementById("C3"));
           // track1.connect(biquad)
@@ -399,4 +401,4 @@ function Sound2() {
 export default connect(
   null,
   {} //pass in actions here
-)(Sound2);
+)(Distortion);

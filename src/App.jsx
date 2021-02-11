@@ -4,7 +4,8 @@ import Visualizer from './components/Visualizer';
 import { Recorder } from './components/Recorder';
 import { Settings } from './components/Settings';
 import { Control } from './components/Control';
-import NewSound from './components/Filter';
+import Filter from './components/Filter';
+import Distortion from './components/Distortion'
 import './styles.scss'
 const App = () => {
 
@@ -17,11 +18,12 @@ const App = () => {
         <Route exact path='/sound2'>
           <NewSound />
           <Settings /> 
-          <Recorder />
           <Control />
-        </Route>
-      </Switch>  */}
-      <Filter />
+          </Route>
+        </Switch>  */}
+      {/* <Filter /> */}
+      <Distortion />
+        {/* <Recorder /> */}
     </div>
   )
 };

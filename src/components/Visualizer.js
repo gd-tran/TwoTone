@@ -90,19 +90,8 @@ function Visualizer() {
         }
         // const track2 = ac.createMediaElementSource(document.getElementById("E3"));
         distortion.connect(ac.destination)
-      // const track1 = ac.createMediaElementSource(document.getElementById("C3"));
-
-      // track1.connect(biquad);
-      // track2.connect(biquad);
-      // distortion.connect(biquad)
-      // distortion.connect(ac.destination);
-      // track2.connect(dest)
-      // track1.connect(ac.destination)
-      // track2.connect(ac.destination)
-      // mediaRecorder.connect(ac.destination)
-      // mediaRecorder.start();
-      // e.target.textContent = "Stop recording";
-      // clicked = true;
+    
+    
     } else {
       mediaRecorder.stop();
       e.target.disabled = true;
