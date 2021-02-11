@@ -47,6 +47,14 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.png/,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
   mode: process.env.NODE_ENV,
