@@ -1,5 +1,5 @@
 .circle {
-  opacity: 0.5;
+  opacity: 1;
   padding: 10;
   margin: 20;
   display: inline-block;
@@ -9,7 +9,7 @@
 }
 
 .diamond {
-  opacity: 0.5;
+  opacity: 1;
   padding: 10;
   margin-left: 40;
   display: inline-block;
@@ -28,15 +28,15 @@
 }
 
 .fade-out {
-  animation: fadeOut ease 7s;
-  -webkit-animation: fadeOut ease 7s;
-  -moz-animation: fadeOut ease 7s;
-  -o-animation: fadeOut ease 7s;
-  -ms-animation: fadeOut ease 7s;
+  animation: fadeOut ease 2s;
+  -webkit-animation: fadeOut ease 2s;
+  -moz-animation: fadeOut ease 2s;
+  -o-animation: fadeOut ease 2s;
+  -ms-animation: fadeOut ease 2s;
 }
 @keyframes fadeOut {
   0% {
-    opacity:0.5;
+    opacity:1;
   }
   100% {
     opacity:0;
@@ -82,9 +82,8 @@
 #ACircle {
   position: absolute;
   left: 30%;
-  background-color: #E1C12A;
+  background-color: #F240DA;
 }
-
 
 /* //transition: opacity 2s; */
 /* transition: opacity .25s ease-in-out; */
@@ -92,73 +91,73 @@
 
 #WCircle {
   position: absolute;
-  left: 32.5%;
-  background-color: #F17325;
+  left: 32%;
+  background-color: #F24055;
 }
 
 #SCircle {
   position: absolute;
-  left: 35%;
-  background-color: #F6616f
+  left: 34%;
+  background-color: #F2B140;
 }
 
 #ECircle {
   position: absolute;
-  left: 37.5%;
-  background-color: #90364F;
+  left: 36%;
+  background-color: #AEF240;
 }
 
 #DCircle {
   position: absolute;
-  left: 40%;
-  background-color: #54ABD1
+  left: 38%;
+  background-color: #40F258;
 }
 
 #FCircle {
   position: absolute;
-  left: 42.5%;
-  background-color: #4281BD
+  left: 40%;
+  background-color: #40F2DD
 }
 
 #TCircle {
   position: absolute;
-  left: 45%;
-  background-color: #7AB44D
+  left: 42%;
+  background-color: #F6798E70
 }
 
 #GCircle {
   position: absolute;
-  left: 47.5%;
-  background-color: #F59B36
+  left: 44%;
+  background-color: #4081F2
 }
 #YCircle {
   position: absolute;
-  left: 50%;
+  left: 46%;
   background-color: #E23E33
 }
 
 #HCircle {
   position: absolute;
-  left: 52.5%;
-  background-color: #9C3342
+  left: 48%;
+  background-color: #8440F2
 }
 
 #UCircle {
   position: absolute;
-  left: 55%;
-  background-color: #4DA7D2
+  left: 50%;
+  background-color: #D6F58F
 }
 
 #JCircle {
   position: absolute;
-  left: 57.5%;
-  background-color: #76B149
+  left: 52%;
+  background-color: #5FBF2B
 }
 
 #KCircle {
   position: absolute;
-  left: 60%;
-  background-color: #DABD26
+  left: 54%;
+  background-color: #8FF594
 }
 
 #container {

@@ -16,7 +16,6 @@ import {
   KCircle,
 } from "./shapes/circles";
 
-
 // all the components wee need for the visualizer to work will live on this compnent
 // base on the value of the state, it will render the value of the key of the obj
 // the state gets updated every time a new key is pressed

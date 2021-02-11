@@ -2,7 +2,7 @@ import React from "react";
 
 
 const ACircle = () => {
-  return <div id="ACircle" className="diamond fade-out"></div>
+  return <div id="ACircle" className="circle fade-out"></div>
 };
 
 const WCircle = () => {
