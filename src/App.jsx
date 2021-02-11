@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Visualizer from './components/Visualizer';
 import { Recorder } from './components/Recorder';
 import { Settings } from './components/Settings'
+import { Control } from './components/Control'
 import './styles.scss'
 const App = () => {
 
@@ -14,7 +15,7 @@ const App = () => {
         </Route>
         <Route exact path='/visualizer'> */}
           <Visualizer />
-          <Settings />
+          {/* <Settings /> */}
           {/* <Recorder /> */}
           {/* <Control /> */}
         {/* </Route>
