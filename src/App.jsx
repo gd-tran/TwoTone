@@ -13,12 +13,4 @@ const App = () => {
         </Route>
         <Route exact path='/visualizer'> */}
           <Visualizer />
-        {/* </Route>
-      </Switch> */}
-    </div>
-  )
-};
-
-
-export { App };
 
