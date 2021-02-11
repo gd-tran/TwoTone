@@ -1,108 +1,87 @@
+
 #ACircle {
   position: absolute;
-  left: 530px;
-  top: 260px;
-  /* opacity: 1;
-  transition: opacity 0.3 ease-in-out; */
+  left: 15%;
 }
 
 #WCircle {
   position: absolute;
-  left: 550px;
-  /* top: 260px; */
+  left: 20%;
 }
 
 #SCircle {
   position: absolute;
-  left: 570px;
-  top: 260px;
+  left: 25%;
 }
+
 #ECircle {
   position: absolute;
-  left: 570px;
-  top: 260px;
+  left: 30%;
 }
 
 #DCircle {
   position: absolute;
-  left: 580px;
-  top: 260px;
+  left: 35%;
 }
 
 #FCircle {
   position: absolute;
-  left: 590px;
-  top: 260px;
+  left: 40%;
 }
 
 #TCircle {
   position: absolute;
-  left: 600px;
-  top: 260px;
+  left: 45%;
 }
 
 #GCircle {
   position: absolute;
-  left: 610px;
-  top: 260px;
+  left: 50%;
+  
 }
 #YCircle {
   position: absolute;
-  left: 620px;
-  top: 260px;
+  left: 55%;
 }
 
 #HCircle {
   position: absolute;
-  left: 630px;
-  top: 260px;
+  left: 60%;
 }
 
 #UCircle {
   position: absolute;
-  left: 640px;
-  top: 260px;
+  left: 65%;
 }
 
 #JCircle {
   position: absolute;
-  left: 650px;
-  top: 260px;
+  left: 70%;
 }
 
 #KCircle {
   position: absolute;
-  left: 660px;
-  top: 260px;
+  left: 75%;
 }
 
 #container {
+  display:flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
+  position: relative;
   background-color: black;
 }
 
 #circleContainer {
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: 25%;
   background-color: black;
-  
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%)
 }
 
-
-/* position: fixed;
-top: 50%;
-left: 50%; */
-
-
-/* #myLogo {
-  opacity: 1;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -moz-transition: opacity 0.3s ease-in-out;
-  -ms-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3 ease-in-out;
-}
-#myLogo.fade {
-  opacity:0;
-} */

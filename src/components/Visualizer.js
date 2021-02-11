@@ -39,7 +39,7 @@ function Visualizer() {
 
 
   const handleKeyDown = (event) => {
-    //updates state usin
+    //updates state using
     if (event.code === "KeyA") {
       setCNote(true);
       document.getElementById("C3").play()
@@ -197,87 +197,89 @@ function Visualizer() {
   }, []);
   
   return (
-    <div id="container">
-
-      <audio id="C3" src="./src/assets/C3.mp3"></audio>
-      <audio id="C3Sharp" src="./src/assets/C3Sharp.mp3"></audio>
-      <audio id="D3" src="./src/assets/D3.mp3"></audio>
-      <audio id="D3Sharp" src="./src/assets/D3Sharp.mp3"></audio>
-      <audio id="E3" src="./src/assets/E3.mp3"></audio>
-      <audio id="F3" src="./src/assets/F3.mp3"></audio>
-      <audio id="F3Sharp" src="./src/assets/F3Sharp.mp3"></audio>
-      <audio id="G3" src="./src/assets/G3.mp3"></audio>
-      <audio id="G3Sharp" src="./src/assets/G3Sharp.mp3"></audio>
-      <audio id="A3" src="./src/assets/A3.mp3"></audio>
-      <audio id="A3Sharp" src="./src/assets/A3Sharp.mp3"></audio>
-      <audio id="B3" src="./src/assets/B3.mp3"></audio>
-      <audio id="C4" src="./src/assets/C4.mp3"></audio>
-      
-      <div id="circleContainer">
-        <div>
-          {{
-            true: <ACircle />
-          }[CNote]}
-        </div>
-        <div>
-          {{
-            true: <WCircle />
-          }[CsharpNote]}
-        </div>
-        <div>
-          {{
-            true: <SCircle />
-          }[DNote]}
-        </div>
-        <div>
-          {{
-            true: <ECircle />
-          }[DsharpNote]}
-        </div>
-        <div>
-          {{
-            true: <DCircle />
-          }[ENote]}
-        </div>
-        <div>
-          {{
-            true: <FCircle />
-          }[FNote]}
-        </div>
-        <div>
-          {{
-            true: <TCircle />
-          }[FsharpNote]}
-        </div>
-        <div>
-          {{
-            true: <GCircle />
-          }[GNote]}
-        </div>
-        <div>
-          {{
-            true: <YCircle />
-          }[GsharpNote]}
-        </div>
-        <div>
-          {{
-            true: <HCircle />
-          }[ANote]}
-        </div>
-        <div>
-          {{
-            true: <UCircle />
-          }[AsharpNote]}
-        </div>
-        <div>
-          {{
-            true: <JCircle />
-          }[BNote]}
-        </div>
-        <div>
-          {{
-            true: <KCircle />
-          }[highCNote]}
+    <div>
+      <div>
+        <audio id="C3" src="./src/assets/C3.mp3"></audio>
+        <audio id="C3Sharp" src="./src/assets/C3Sharp.mp3"></audio>
+        <audio id="D3" src="./src/assets/D3.mp3"></audio>
+        <audio id="D3Sharp" src="./src/assets/D3Sharp.mp3"></audio>
+        <audio id="E3" src="./src/assets/E3.mp3"></audio>
+        <audio id="F3" src="./src/assets/F3.mp3"></audio>
+        <audio id="F3Sharp" src="./src/assets/F3Sharp.mp3"></audio>
+        <audio id="G3" src="./src/assets/G3.mp3"></audio>
+        <audio id="G3Sharp" src="./src/assets/G3Sharp.mp3"></audio>
+        <audio id="A3" src="./src/assets/A3.mp3"></audio>
+        <audio id="A3Sharp" src="./src/assets/A3Sharp.mp3"></audio>
+        <audio id="B3" src="./src/assets/B3.mp3"></audio>
+        <audio id="C4" src="./src/assets/C4.mp3"></audio>
+      </div>
+      <div id="container">
+        <div id="circleContainer">  
+          <div>
+            {{
+              true: <ACircle />
+            }[CNote]}
+          </div>
+          <div>
+            {{
+              true: <WCircle />
+            }[CsharpNote]}
+          </div>
+          <div>
+            {{
+              true: <SCircle />
+            }[DNote]}
+          </div>
+          <div>
+            {{
+              true: <ECircle />
+            }[DsharpNote]}
+          </div>
+          <div>
+            {{
+              true: <DCircle />
+            }[ENote]}
+          </div>
+          <div>
+            {{
+              true: <FCircle />
+            }[FNote]}
+          </div>
+          <div>
+            {{
+              true: <TCircle />
+            }[FsharpNote]}
+          </div>
+          <div>
+            {{
+              true: <GCircle />
+            }[GNote]}
+          </div>
+          <div>
+            {{
+              true: <YCircle />
+            }[GsharpNote]}
+          </div>
+          <div>
+            {{
+              true: <HCircle />
+            }[ANote]}
+          </div>
+          <div>
+            {{
+              true: <UCircle />
+            }[AsharpNote]}
+          </div>
+          <div>
+            {{
+              true: <JCircle />
+            }[BNote]}
+          </div>
+          <div>
+            {{
+              true: <KCircle />
+            }[highCNote]}
+          </div>
         </div>
       </div>
     </div>
