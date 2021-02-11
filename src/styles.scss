@@ -1,96 +1,184 @@
 .circle {
-  // display: inline-block;
-  border-Radius: 50%;
-  width: 120;
-  height: 120;
-  background-color: "#393E41",
+  opacity: 0.5;
+  padding: 10;
+  margin: 20;
+  display: inline-block;
+  border-radius: 50%;
+  width: 140;
+  height: 140;
+}
+
+.diamond {
+  opacity: 0.5;
+  padding: 10;
+  margin-left: 40;
+  display: inline-block;
+  transform: rotate(45deg);
+  width: 100;
+  height: 100;
+}
+
+.oval {
+  width: 0;
+  height: 0;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  border-top: 100px solid transparent;
+  border-radius: 50%;
+}
+
+.fade-out {
+  animation: fadeOut ease 7s;
+  -webkit-animation: fadeOut ease 7s;
+  -moz-animation: fadeOut ease 7s;
+  -o-animation: fadeOut ease 7s;
+  -ms-animation: fadeOut ease 7s;
+}
+@keyframes fadeOut {
+  0% {
+    opacity:0.5;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity:0.5;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity:0.5;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity:0.5;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity:0.5;
+  }
+  100% {
+    opacity:0;
+}
 }
 
 #ACircle {
-  background-color: "#393E41",
+  position: absolute;
+  left: 30%;
+  background-color: #E1C12A;
 }
 
+
+/* //transition: opacity 2s; */
+/* transition: opacity .25s ease-in-out; */
+/* animation: fadeOut ease 8s; */
+
 #WCircle {
-  background-color: "#DC143C",
+  position: absolute;
+  left: 32.5%;
+  background-color: #F17325;
 }
 
 #SCircle {
-  background-color: "#FF7F00",
+  position: absolute;
+  left: 35%;
+  background-color: #F6616f
 }
 
 #ECircle {
-  background-color: "#FFFF00",
+  position: absolute;
+  left: 37.5%;
+  background-color: #90364F;
 }
 
 #DCircle {
-  background-color: "#00FF00",
+  position: absolute;
+  left: 40%;
+  background-color: #54ABD1
 }
 
 #FCircle {
-  background-color: "#0000FF",
+  position: absolute;
+  left: 42.5%;
+  background-color: #4281BD
 }
 
 #TCircle {
-  background-color: "#2E2B5F",
+  position: absolute;
+  left: 45%;
+  background-color: #7AB44D
 }
 
 #GCircle {
-  background-color: "#FF5733",
+  position: absolute;
+  left: 47.5%;
+  background-color: #F59B36
 }
 #YCircle {
   position: absolute;
-  left: 620px;
-  /* top: 260px; */
-  background-color: "#3386FF",
+  left: 50%;
+  background-color: #E23E33
 }
 
 #HCircle {
   position: absolute;
-  left: 630px;
-  /* top: 260px; */
+  left: 52.5%;
+  background-color: #9C3342
 }
 
 #UCircle {
   position: absolute;
-  left: 640px;
-  /* top: 260px; */
+  left: 55%;
+  background-color: #4DA7D2
 }
 
 #JCircle {
   position: absolute;
-  left: 650px;
-  /* top: 260px; */
+  left: 57.5%;
+  background-color: #76B149
 }
 
 #KCircle {
   position: absolute;
-  left: 660px;
-  /* top: 260px; */
+  left: 60%;
+  background-color: #DABD26
 }
 
 #container {
+  display:flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
-  /* background-color: black; */
+  position: relative;
+  background-color: black;
 }
 
 .circleContainer {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 120px;
-  background-color: green
+  height: 25%;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%)
 }
 
-
-/* #myLogo {
-  opacity: 1;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -moz-transition: opacity 0.3s ease-in-out;
-  -ms-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3 ease-in-out;
-}
-#myLogo.fade {
-  opacity:0;
-} */

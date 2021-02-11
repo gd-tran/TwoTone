@@ -89,7 +89,6 @@ function Visualizer() {
       setCsharpNote(true);
       document.getElementById("C3Sharp").volume = 0.1
       document.getElementById("C3Sharp").play()
-      
     }
 
     if (event.code === "KeyS") {
@@ -252,95 +251,95 @@ function Visualizer() {
   
 
   return (
-    <div id="container">
-
-      <audio id="C3" src="./src/assets/C3.mp3" volume="0.12"></audio>
-      <audio id="C3Sharp" src="./src/assets/C3Sharp.mp3" volume="0.121"></audio>
-      <audio id="D3" src="./src/assets/D3.mp3" volume="0.12"></audio>
-      <audio id="D3Sharp" src="./src/assets/D3Sharp.mp3" volume="0.12"></audio>
-      <audio id="E3" src="./src/assets/E3.mp3" volume="0.12"></audio>
-      <audio id="F3" src="./src/assets/F3.mp3" volume="0.12"></audio>
-      <audio id="F3Sharp" src="./src/assets/F3Sharp.mp3" volume="0.12"></audio>
-      <audio id="G3" src="./src/assets/G3.mp3" volume="0.12"></audio>
-      <audio id="G3Sharp" src="./src/assets/G3Sharp.mp3" volume="0.12"></audio>
-      <audio id="A3" src="./src/assets/A3.mp3" volume="0.12"></audio>
-      <audio id="A3Sharp" src="./src/assets/A3Sharp.mp3"></audio>
-      <audio id="B3" src="./src/assets/B3.mp3" volume="0.12"></audio>
-      <audio id="C4" src="./src/assets/C4.mp3" volume="0.12"></audio>
-      <button onClick={record}>RECORD SESSION</button>
-      <audio controls id="blob" >LISTEN BACK</audio>
-      <div className="circleContainer">  
-        <div>
-          {{
-            true: <ACircle />
-          }[CNote]}
-        </div>
-        <div>
-          {{
-            true: <WCircle />
-          }[CsharpNote]}
-        </div>
-        <div>
-          {{
-            true: <SCircle />
-          }[DNote]}
-        </div>
-        <div>
-          {{
-            true: <ECircle />
-          }[DsharpNote]}
-        </div>
-        <div>
-          {{
-            true: <DCircle />
-          }[ENote]}
-        </div>
-        <div>
-          {{
-            true: <FCircle />
-          }[FNote]}
-        </div>
-        <div>
-          {{
-            true: <TCircle />
-          }[FsharpNote]}
-        </div>
-        <div>
-          {{
-            true: <GCircle />
-          }[GNote]}
-        </div>
-        <div>
-          {{
-            true: <YCircle />
-          }[GsharpNote]}
-        </div>
-        <div>
-          {{
-            true: <HCircle />
-          }[ANote]}
-        </div>
-        <div>
-          {{
-            true: <UCircle />
-          }[AsharpNote]}
-        </div>
-        <div>
-          {{
-            true: <JCircle />
-          }[BNote]}
-        </div>
-        <div>
-          {{
-            true: <KCircle />
-          }[highCNote]}
+    <div>
+      <div>
+        <button onClick={record}>TRIGGER FILTER</button>
+        <audio id="C3" src="./src/assets/C3.mp3"></audio>
+        <audio id="C3Sharp" src="./src/assets/C3Sharp.mp3"></audio>
+        <audio id="D3" src="./src/assets/D3.mp3"></audio>
+        <audio id="D3Sharp" src="./src/assets/D3Sharp.mp3"></audio>
+        <audio id="E3" src="./src/assets/E3.mp3"></audio>
+        <audio id="F3" src="./src/assets/F3.mp3"></audio>
+        <audio id="F3Sharp" src="./src/assets/F3Sharp.mp3"></audio>
+        <audio id="G3" src="./src/assets/G3.mp3"></audio>
+        <audio id="G3Sharp" src="./src/assets/G3Sharp.mp3"></audio>
+        <audio id="A3" src="./src/assets/A3.mp3"></audio>
+        <audio id="A3Sharp" src="./src/assets/A3Sharp.mp3"></audio>
+        <audio id="B3" src="./src/assets/B3.mp3"></audio>
+        <audio id="C4" src="./src/assets/C4.mp3"></audio>
+      </div>
+      <div id="container">
+        <div id="circleContainer">  
+          <div>
+            {{
+              true: <ACircle />
+            }[CNote]}
+          </div>
+          <div>
+            {{
+              true: <WCircle />
+            }[CsharpNote]}
+          </div>
+          <div>
+            {{
+              true: <SCircle />
+            }[DNote]}
+          </div>
+          <div>
+            {{
+              true: <ECircle />
+            }[DsharpNote]}
+          </div>
+          <div>
+            {{
+              true: <DCircle />
+            }[ENote]}
+          </div>
+          <div>
+            {{
+              true: <FCircle />
+            }[FNote]}
+          </div>
+          <div>
+            {{
+              true: <TCircle />
+            }[FsharpNote]}
+          </div>
+          <div>
+            {{
+              true: <GCircle />
+            }[GNote]}
+          </div>
+          <div>
+            {{
+              true: <YCircle />
+            }[GsharpNote]}
+          </div>
+          <div>
+            {{
+              true: <HCircle />
+            }[ANote]}
+          </div>
+          <div>
+            {{
+              true: <UCircle />
+            }[AsharpNote]}
+          </div>
+          <div>
+            {{
+              true: <JCircle />
+            }[BNote]}
+          </div>
+          <div>
+            {{
+              true: <KCircle />
+            }[highCNote]}
+          </div>
         </div>
       </div>
     </div>
   );
 }
-
-//import { ACircle, WCircle, SCircle, ECircle, DCircle, FCircle, TCircle, UCircle, JCircle, KCircle } from './shapes/circles';
 
 export default connect(
   null,

@@ -2,8 +2,7 @@ import React, { Component, useState, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Visualizer from './components/Visualizer';
 import { Recorder } from './components/Recorder';
-import { Control } from './components/Control';
-// local state here to track whether the user has logged in correctly
+import { Settings } from './components/Settings'
 import './styles.scss'
 const App = () => {
 
@@ -15,6 +14,7 @@ const App = () => {
         </Route>
         <Route exact path='/visualizer'> */}
           <Visualizer />
+          <Settings />
           {/* <Recorder /> */}
           {/* <Control /> */}
         {/* </Route>
@@ -22,7 +22,6 @@ const App = () => {
     </div>
   )
 };
-
 
 export { App };
 
